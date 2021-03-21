@@ -4,3 +4,127 @@
 
 $base-font: 'Crimson Text', serif;
 $secondary-font:'Montserrat', sans-serif;
+
+
+// GENERAL STYLES
+*{
+    border: 2px solid palegreen;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 80%;
+    margin:0 auto;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+p{
+    margin:0;
+}
+
+// TYPOGRAPHY
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+h1{
+    font-family: $secondary-font;
+    font-weight: 900;
+}
+
+
+h2{
+    font-family: $base-font;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+h3{
+    font-family: $secondary-font;
+    font-size: 2rem;
+}
+
+// HEADER STYLES
+
+header{
+    padding: 2em;
+    nav{
+        i{
+            font-size: 3rem;
+        }
+    }
+}
+
+// MAIN STYLES
+
+section{
+    padding: 2em;
+    text-align: center;
+}
+
+.img-and-bio{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    text-align: left;
+}
+
+
+// TOOLKIT STYLES
+
+
+.skill-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    i{
+        font-size: 4rem;
+    }
+}
+
+
+// Contact Styles
+
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+    li{
+        padding: 1em;
+    }
+}
+
+form{
+    display: grid;
+    gap: 1em;
+}
+
+.styling-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1em;
+}
+
+
+// FOOTER STYLES
+
+footer{
+    text-align: center;
+}
+
+
+
+
+
+
+
+

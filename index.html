@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Emily Codes</title>
 </head>
 
@@ -56,12 +57,10 @@
         <section class="about-me">
             <div class="wrapper">
                 <h2>about me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, et.</p>
                 <div class="img-and-bio">
                     <img src="https://picsum.photos/400/400" alt="profile photo">
                     <div class="bio">
-                        <h2>Hi, I'm Emily LeBlanc - Front-End Developer & Chocoholic</h2>
-                        <h3>life motto - keep it simple</h3>
+                        <h3>Hi, I'm Emily LeBlanc - Front-End Developer & Chocoholic</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam perferendis rem impedit culpa
                             et illo earum reprehenderit ab inventore nihil autem illum sed, voluptas beatae tempora
                             repudiandae reiciendis minus? Aliquam veniam reiciendis fuga et, quam, iste ipsam, similique
@@ -75,9 +74,9 @@
                 </div>
             </div>
         </section>
-        <section class="tookit">
+        <section class="toolkit">
             <div class="wrapper">
-                <h3>my tookit</h3>
+                <h2>my tookit</h2>
                 <!-- ICONS DIVIDED INTO DIVS WITH DESC. TAG -->
                 <ul class="skill-icons">
                     <li>
@@ -106,7 +105,7 @@
                     </li>
                     <li>
                         <img src="https://img.icons8.com/color/50/000000/google-firebase-console.png" />
-                        <p>firebsae</p>
+                        <p>firebase</p>
                     </li>
                     <li>
                         <i class="fas fa-universal-access"></i>
@@ -131,18 +130,21 @@
                 </ul>
 
                 <form action="">
-                    <!-- userName -->
-                    <label for="userName" class="name sr-only">name</label>
-                    <input type="text" id="userName" name="userName" placeholder="name" required>
+                    <div class="styling-grid">
 
-                    <!-- userEmail -->
-                    <label for="userEmail" class="email sr-only"></label>
-                    <input type="email" id="userEmail" name="userEmail" placeholder="email" required>
-
-                    <!-- subject input -->
-                    <label for="subject" class="subject sr-only"></label>
-                    <input type="text" id="subject" name="subject" placeholder="subject" required>
-
+                        <!-- userName -->
+                        <label for="userName" class="name sr-only">name</label>
+                        <input type="text" id="userName" name="userName" placeholder="name" required>
+                        
+                        <!-- userEmail -->
+                        <label for="userEmail" class="email sr-only"></label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="email" required>
+                        
+                        <!-- subject input -->
+                        <label for="subject" class="subject sr-only"></label>
+                        <input type="text" id="subject" name="subject" placeholder="subject" required>
+                        
+                    </div>
 
                     <!-- message textarea -->
                     <label for="message" class="message sr-only"></label>
