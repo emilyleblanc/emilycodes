@@ -1,8 +1,14 @@
 @import 'setup';
+@import 'portfolio';
 
 // Variables 
 $primary-color:#696773;
 $secondary-color: #B9C0DA;
+$brand-color:#FCA336;
+$accent-light:#F0A202;
+$accent-dark:#F18805;
+$accent-cream:#F3FFC6;
+
 
 $base-font: 'Crimson Text', serif;
 $secondary-font:'Montserrat', sans-serif;
@@ -63,11 +69,26 @@ h3{
 header{
     padding: 2em;
     height: 100vh;
+    text-align: center;
+
+    i{
+        font-size: 2rem;
+        color: $primary-color;
+    }
+
     nav{
+        display: flex;
+        justify-content: flex-end;
         i{
             font-size: 3rem;
         }
     }
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
 }
 
 .img-and-h1{
@@ -75,14 +96,6 @@ header{
     justify-content: center;
     align-items: center;
     padding: 50px;
-
-    img{
-        border-radius:50%;
-    }
-
-    h1{
-       max-width: fit-content;
-    }
 
 }
 
@@ -94,52 +107,8 @@ section{
     text-align: center;
 }
 
-// PORTFOLIO
-.gallery{
-    padding: 2em 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(80px, 1fr));
-    grid-auto-rows:80px;
-    grid-auto-flow: dense;
-        
-   
-    .box1{
-        background-color: #F0A202;
-    }
-    .box2{
-        background-color: #F18805;
-        grid-column: span 4;
-        grid-row:span 4;
-    }
-    .box3{
-        background-color: #B9C0DA;
-        grid-column: span 2;
-        grid-row: span 2;
 
-    }
-    .box4{
-        background-color: #696773;
-        grid-row:span 4;
-    }
-    .box5{
-        background-color: #F3FFC6;
-    }
-    .box6{
-        background-color: #F0A202;
-        grid-row: span 2;
-    }
-    .box7{
-        background-color: #DDFFD9;
-    }
-
-    .box8{
-        background-color: #ECC8AE;
-        grid-column: span 2;
-        // grid-row: span 2 ;
-    }
-}
-
-
+// ABOUT ME STYLES
 
 
 .img-and-bio{
@@ -148,6 +117,19 @@ section{
     grid-template-columns: 1fr 2fr;
     gap: 3rem;
     text-align: left;
+
+    button{
+        border: none;
+        padding: 1em 2em;
+        background-color: $brand-color;
+        color: $primary-color;
+        font-weight: 900;
+        font-family: $secondary-font;
+        &:hover,
+        &:focus{
+            background-color: $secondary-color;
+        }
+    }
 }
 
 
@@ -169,7 +151,7 @@ section{
 // Contact Styles
 
 .contact-me{
-    background-color: #FCA336;
+    background-color:$brand-color;
 }
 
 .social-media-icons{
