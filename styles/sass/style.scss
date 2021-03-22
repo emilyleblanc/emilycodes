@@ -2,6 +2,7 @@
 
 // Variables 
 $primary-color:#696773;
+$secondary-color: #B9C0DA;
 
 $base-font: 'Crimson Text', serif;
 $secondary-font:'Montserrat', sans-serif;
@@ -26,7 +27,6 @@ ul{
 h1,
 h2,
 h3,
-p,
 ul{
     margin:0;
 }
@@ -34,15 +34,16 @@ ul{
 // TYPOGRAPHY
 
 body{
-    font-size: 1.6rem;
-    line-height: 1.4;
-    color: $primary-color;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color:$primary-color;
     background-color: #FFF6EB;
 }
 
 h1{
     font-family: $secondary-font;
     font-weight: 900;
+    color: #FCA336;
 }
 
 
@@ -61,7 +62,7 @@ h3{
 
 header{
     padding: 2em;
-    height: 80vh;
+    height: 100vh;
     nav{
         i{
             font-size: 3rem;
@@ -80,7 +81,7 @@ header{
     }
 
     h1{
-       max-width: 400px;
+       max-width: fit-content;
     }
 
 }
@@ -89,7 +90,7 @@ header{
 
 
 section{
-    padding: 2em;
+    padding: 3em 0;
     text-align: center;
 }
 
