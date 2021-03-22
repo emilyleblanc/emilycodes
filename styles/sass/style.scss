@@ -1,15 +1,16 @@
 @import 'setup';
 
 // Variables 
+$primary-color:#696773;
 
 $base-font: 'Crimson Text', serif;
 $secondary-font:'Montserrat', sans-serif;
 
 
 // GENERAL STYLES
-*{
-    border: 2px solid palegreen;
-}
+// *{
+//     border: 2px solid palegreen;
+// }
 
 .wrapper {
     max-width: 1200px;
@@ -19,13 +20,14 @@ $secondary-font:'Montserrat', sans-serif;
 
 ul{
     list-style: none;
-    margin: 0;
+    padding: 0;
 }
 
 h1,
 h2,
 h3,
-p{
+p,
+ul{
     margin:0;
 }
 
@@ -34,6 +36,8 @@ p{
 body{
     font-size: 1.6rem;
     line-height: 1.4;
+    color: $primary-color;
+    background-color: #FFF6EB;
 }
 
 h1{
@@ -57,6 +61,7 @@ h3{
 
 header{
     padding: 2em;
+    height: 80vh;
     nav{
         i{
             font-size: 3rem;
@@ -64,12 +69,77 @@ header{
     }
 }
 
+.img-and-h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+    img{
+        border-radius:50%;
+    }
+
+    h1{
+       max-width: 400px;
+    }
+
+}
+
 // MAIN STYLES
+
 
 section{
     padding: 2em;
     text-align: center;
 }
+
+// PORTFOLIO
+.gallery{
+    padding: 2em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(80px, 1fr));
+    grid-auto-rows:80px;
+    grid-auto-flow: dense;
+        
+   
+    .box1{
+        background-color: #F0A202;
+    }
+    .box2{
+        background-color: #F18805;
+        grid-column: span 4;
+        grid-row:span 4;
+    }
+    .box3{
+        background-color: #B9C0DA;
+        grid-column: span 2;
+        grid-row: span 2;
+
+    }
+    .box4{
+        background-color: #696773;
+        grid-row:span 4;
+    }
+    .box5{
+        background-color: #F3FFC6;
+    }
+    .box6{
+        background-color: #F0A202;
+        grid-row: span 2;
+    }
+    .box7{
+        background-color: #DDFFD9;
+    }
+
+    .box8{
+        background-color: #ECC8AE;
+        grid-column: span 2;
+        // grid-row: span 2 ;
+    }
+}
+
+
+
 
 .img-and-bio{
     padding: 2em;
@@ -84,8 +154,10 @@ section{
 
 
 .skill-icons{
+    padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em 0;
     
     i{
         font-size: 4rem;
@@ -94,6 +166,10 @@ section{
 
 
 // Contact Styles
+
+.contact-me{
+    background-color: #FCA336;
+}
 
 .social-media-icons{
     display: flex;
@@ -106,6 +182,15 @@ section{
 form{
     display: grid;
     gap: 1em;
+    input,
+    textarea,
+    button{
+        padding: 5px;
+        border:none;
+        color: $primary-color;
+        background-color: #FFF6EB;
+
+    }
 }
 
 .styling-grid{
@@ -119,6 +204,7 @@ form{
 
 footer{
     text-align: center;
+    background-color: #B9C0DA;
 }
 
 

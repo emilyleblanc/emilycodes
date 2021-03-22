@@ -235,10 +235,6 @@ img {
   height: auto;
 }
 
-* {
-  border: 2px solid palegreen;
-}
-
 .wrapper {
   max-width: 1200px;
   width: 80%;
@@ -247,19 +243,22 @@ img {
 
 ul {
   list-style: none;
-  margin: 0;
+  padding: 0;
 }
 
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   margin: 0;
 }
 
 body {
   font-size: 1.6rem;
   line-height: 1.4;
+  color: #696773;
+  background-color: #FFF6EB;
 }
 
 h1 {
@@ -280,15 +279,86 @@ h3 {
 
 header {
   padding: 2em;
+  height: 80vh;
 }
 
 header nav i {
   font-size: 3rem;
 }
 
+.img-and-h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+.img-and-h1 img {
+  border-radius: 50%;
+}
+
+.img-and-h1 h1 {
+  max-width: 400px;
+}
+
 section {
   padding: 2em;
   text-align: center;
+}
+
+.gallery {
+  padding: 2em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: 80px;
+  grid-auto-flow: dense;
+}
+
+.gallery .box1 {
+  background-color: #F0A202;
+}
+
+.gallery .box2 {
+  background-color: #F18805;
+  grid-column: span 4;
+  grid-row: span 4;
+}
+
+.gallery .box3 {
+  background-color: #B9C0DA;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery .box4 {
+  background-color: #696773;
+  grid-row: span 4;
+}
+
+.gallery .box5 {
+  background-color: #F3FFC6;
+}
+
+.gallery .box6 {
+  background-color: #F0A202;
+  grid-row: span 2;
+}
+
+.gallery .box7 {
+  background-color: #DDFFD9;
+}
+
+.gallery .box8 {
+  background-color: #ECC8AE;
+  grid-column: span 2;
 }
 
 .img-and-bio {
@@ -302,14 +372,20 @@ section {
 }
 
 .skill-icons {
+  padding: 1em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em 0;
 }
 
 .skill-icons i {
   font-size: 4rem;
+}
+
+.contact-me {
+  background-color: #FCA336;
 }
 
 .social-media-icons {
@@ -331,6 +407,15 @@ form {
   gap: 1em;
 }
 
+form input,
+form textarea,
+form button {
+  padding: 5px;
+  border: none;
+  color: #696773;
+  background-color: #FFF6EB;
+}
+
 .styling-grid {
   display: -ms-grid;
   display: grid;
@@ -341,4 +426,5 @@ form {
 
 footer {
   text-align: center;
+  background-color: #B9C0DA;
 }
