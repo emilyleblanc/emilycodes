@@ -24,11 +24,11 @@
             </nav>
             <div class="title">
                 <h1>Hello! I'm Emily and I am a Web Developer.</h1>
+                <i class="fas fa-chevron-down"></i>
             </div>
-            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
-                
+
 
 
 
@@ -37,10 +37,20 @@
     <main>
         <section class="work">
             <div class="wrapper">
-                <h2>portfolio</h2>
-                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, excepturi!
-                </p> -->
+
+                <h2>portfolio <span><svg height='100px' width='100px' fill="#000000" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                            viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M91.2,43.9c-0.6,0-1,0.4-1,1c0,0.7-0.3,1.2-0.8,1.7c-5.2,4.6-30,1.9-49.9-0.3C20.7,44.2,10,43.1,7.5,45.3   c-0.4,0.4-0.7,0.9-0.7,1.4c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1c1.3-1.8,17.5,0,30.4,1.4c14.3,1.6,26.8,2.9,36.1,2.9   c7.5,0,12.9-0.8,15.4-3c1-0.9,1.5-2,1.5-3.2C92.2,44.3,91.8,43.9,91.2,43.9z">
+                                </path>
+                            </g>
+                        </svg></span></h2>
+
+
             </div>
+
 
             <!-- START OF GALLERY -->
             <div class="gallery">
@@ -128,32 +138,29 @@
                 </ul>
 
                 <form action="">
-                    <div class="styling-grid">
+                    <!-- userName -->
+                    <label for="userName" class="name sr-only">name</label>
+                    <input type="text" id="userName" name="userName" placeholder="name" required>
 
-                        <!-- userName -->
-                        <label for="userName" class="name sr-only">name</label>
-                        <input type="text" id="userName" name="userName" placeholder="name" required>
+                    <!-- userEmail -->
+                    <label for="userEmail" class="email sr-only"></label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="email" required>
 
-                        <!-- userEmail -->
-                        <label for="userEmail" class="email sr-only"></label>
-                        <input type="email" id="userEmail" name="userEmail" placeholder="email" required>
+                    <!-- subject input -->
+                    <label for="subject" class="subject sr-only"></label>
+                    <input type="text" id="subject" name="subject" placeholder="subject" required>
 
-                        <!-- subject input -->
-                        <label for="subject" class="subject sr-only"></label>
-                        <input type="text" id="subject" name="subject" placeholder="subject" required>
-
-                    </div>
-
-                    <!-- message textarea -->
                     <label for="message" class="message sr-only"></label>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="message" required></textarea>
 
                     <button type="submit">send</button>
+                    <!-- message textarea -->
                 </form>
-                </>
         </section>
     </main>
     <footer>made with <span><i class="far fa-heart"></i></span> by Emily LeBlanc</footer>
+
+
 
 
 </body>

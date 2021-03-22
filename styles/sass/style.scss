@@ -8,6 +8,7 @@ $brand-color:#FCA336;
 $accent-light:#F0A202;
 $accent-dark:#F18805;
 $accent-cream:#F3FFC6;
+$off-white:#FFF6EB;
 
 
 $base-font: 'Crimson Text', serif;
@@ -43,7 +44,7 @@ body{
     font-size: 1.8rem;
     line-height: 1.6;
     color:$primary-color;
-    background-color: #FFF6EB;
+    background-color: $off-white;
 }
 
 h1{
@@ -68,14 +69,10 @@ h3{
 
 header{
     padding: 2em;
-    height: 100vh;
+    height: 90vh;
     text-align: center;
 
-    i{
-        font-size: 2rem;
-        color: $primary-color;
-    }
-
+    
     nav{
         display: flex;
         justify-content: flex-end;
@@ -86,9 +83,14 @@ header{
 }
 .title{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    height: 75vh;
+    height: 80vh;
+    i{
+        font-size: 2rem;
+        color: $primary-color;
+    }
 }
 
 .img-and-h1{
@@ -107,8 +109,33 @@ section{
     text-align: center;
 }
 
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.box1{
+    background-color: $brand-color;
+    grid-column: span 2;
+}
+
+.box2{
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3{
+    background-color: $accent-cream;
+}
 
 // ABOUT ME STYLES
+
+svg{
+    fill: $primary-color;
+}
 
 
 .img-and-bio{
@@ -164,23 +191,41 @@ section{
 
 form{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
-    input,
-    textarea,
-    button{
-        padding: 5px;
-        border:none;
-        color: $primary-color;
-        background-color: #FFF6EB;
 
+    input,
+    textarea{
+        padding: .3em;
+        font-family: $base-font;
+        background-color: $off-white;
+        color: $primary-color;
+        font-size: 1.8rem;
+        &:focus{
+            border: 2px solid $secondary-color;
+        }
+    }
+
+    textarea{
+        grid-column: span 3;
+    }
+
+    button{
+        grid-column-start: 3;
+        padding: 1em 1em;
+        border: none;
+        background-color: $secondary-color;
+        color: $primary-color;
+        font-weight: 900;
+        font-family: $secondary-font;
+        &:hover,
+        &:focus{
+            background-color: $accent-cream;
+        }
     }
 }
 
-.styling-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:1em;
-}
+
 
 
 // FOOTER STYLES
