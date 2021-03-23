@@ -246,11 +246,16 @@ ul {
   padding: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
 h1,
 h2,
 h3,
-ul,
-p {
+ul {
   margin: 0;
 }
 
@@ -374,12 +379,14 @@ section {
   font-size: 1.4rem;
   max-width: 30ch;
   color: #F3FFC6;
+  margin: 0;
 }
 
 .project-details p:last-of-type {
   color: #F3FFC6;
   font-weight: 200;
   font-size: 3rem;
+  margin: 0;
 }
 
 .project-details button {
@@ -389,6 +396,10 @@ section {
   color: #696773;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
+  text-transform: lowercase;
+}
+
+.project-details button a {
   padding: 1em 2em;
 }
 

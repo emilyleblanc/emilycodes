@@ -30,11 +30,16 @@ ul{
     padding: 0;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
 h1,
 h2,
 h3,
-ul,
-p{
+ul{
     margin:0;
 }
 
@@ -144,29 +149,38 @@ section{
         font-size: 1.4rem;
         max-width: 30ch;
         color: $accent-cream;
+        margin: 0;
     }
 
     p:last-of-type{
         color: $accent-cream;
         font-weight: 200;
         font-size: 3rem;
+        margin: 0;
     }
 
     
-     button{
+    button{
         border: none;
         margin: 0.5em;
         background-color: $secondary-color;
         color: $primary-color;
         font-weight: 900;
         font-family: $base-font;
-        padding: 1em 2em;
+        text-transform: lowercase;
+
+        a{
+            
+            padding: 1em 2em;
+        }
         &:hover,
         &:focus{
             background-color: $accent-cream;
+
         }
-     }
+    }
 }
+
 
 .box:hover .project-details{
     visibility: visible;
