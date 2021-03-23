@@ -255,35 +255,55 @@ ul {
 
 body {
   font-size: 1.8rem;
-  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
   color: #696773;
   background-color: #FFF6EB;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
   font-weight: 900;
   color: #FCA336;
 }
 
 h2 {
-  font-family: "Crimson Text", serif;
-  font-weight: 900;
-  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-style: italic;
   font-size: 2rem;
+  color: #FCA336;
 }
 
 header {
   padding: 2em;
-  height: 90vh;
+  height: 100vh;
   text-align: center;
 }
 
-header nav {
+.header-flex-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,29 +312,8 @@ header nav {
           justify-content: flex-end;
 }
 
-header nav i {
+nav i {
   font-size: 3rem;
-}
-
-.title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 80vh;
-}
-
-.title i {
-  font-size: 2rem;
-  color: #696773;
 }
 
 .img-and-h1 {
@@ -342,9 +341,44 @@ section {
       grid-template-columns: 1fr 1fr 1fr;
 }
 
+.box {
+  position: relative;
+}
+
+.project-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 163, 54, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.box:hover .project-details {
+  visibility: visible;
+}
+
 .box1 {
   background-color: #FCA336;
-  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box2 {
@@ -364,10 +398,6 @@ section {
   background-color: #F3FFC6;
 }
 
-svg {
-  fill: #696773;
-}
-
 .img-and-bio {
   padding: 2em;
   display: -ms-grid;
@@ -376,6 +406,11 @@ svg {
       grid-template-columns: 1fr 2fr;
   gap: 3rem;
   text-align: left;
+}
+
+.img-and-bio p {
+  max-width: 60ch;
+  font-size: 1.4rem;
 }
 
 .img-and-bio button {
@@ -432,10 +467,11 @@ form {
 form input,
 form textarea {
   padding: .3em;
-  font-family: "Crimson Text", serif;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 400;
   background-color: #FFF6EB;
   color: #696773;
-  font-size: 1.8rem;
 }
 
 form input:focus,

@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,900;1,200;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
@@ -18,16 +17,19 @@
 <body>
     <!-- START OF HEADER -->
     <header>
-        <div class="wrapper">
+        <div class="header-flex-container wrapper">
             <nav>
                 <span><i class="fas fa-bars"></i></span>
             </nav>
             <div class="title">
                 <h1>Hello! I'm Emily and I am a Web Developer.</h1>
-                <i class="fas fa-chevron-down"></i>
             </div>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
+
+
+
 
 
 
@@ -37,30 +39,47 @@
     <main>
         <section class="work">
             <div class="wrapper">
-
-                <h2>portfolio <span><svg height='100px' width='100px' fill="#000000" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-                            viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
-                            <g>
-                                <path
-                                    d="M91.2,43.9c-0.6,0-1,0.4-1,1c0,0.7-0.3,1.2-0.8,1.7c-5.2,4.6-30,1.9-49.9-0.3C20.7,44.2,10,43.1,7.5,45.3   c-0.4,0.4-0.7,0.9-0.7,1.4c0,0.6,0.4,1,1,1c0.6,0,1-0.4,1-1c1.3-1.8,17.5,0,30.4,1.4c14.3,1.6,26.8,2.9,36.1,2.9   c7.5,0,12.9-0.8,15.4-3c1-0.9,1.5-2,1.5-3.2C92.2,44.3,91.8,43.9,91.2,43.9z">
-                                </path>
-                            </g>
-                        </svg></span></h2>
-
-
+                <h2>portfolio</h2>
             </div>
-
 
             <!-- START OF GALLERY -->
             <div class="gallery">
-                <div class="box box1"><img src="./assests/knit-and-pearl-mockup.png" alt="store mockup"></div>
+                <div class="box box1">
+                    <img src="./assests/knit-and-pearl-mockup.png" alt="store mockup">
+                    <div class="project-details">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam repudiandae quas hic tempora, repellat tenetur?</p>
+                        <p>HTML | Sass | React</p>
+                        <button>See the Repo</button>
+                        <button>See the live Site</button>
+                    </div>
+                </div>
 
-                <div class="box box2"><img src="./assests/raise-the-bar-mockup.png" alt="raise the bar mockup"></div>
+                <div class="box box2">
+                    <img src="./assests/raise-the-bar-mockup.png" alt="raise the bar mockup">
+                    <div class="project-details">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam repudiandae quas hic tempora, repellat tenetur?</p>
+                        <p>HTML | Sass | React</p>
+                        <button>See the Repo</button>
+                        <button>See the live Site</button>
+                    </div>
+                </div>
 
-                <div class="box box3"><img src="./assests/sun-run-mockup.png" alt="sun run mockup"></div>
+                <div class="box box3">
+                    <img src="./assests/sun-run-mockup.png" alt="sun run mockup">
+                    <div class="project-details">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam repudiandae quas hic tempora, repellat tenetur?</p>
+                        <p>HTML | Sass | React</p>
+                        <button>See the Repo</button>
+                        <button>See the live Site</button>
+                    </div>
+                </div>
             </div>
         </section>
+
+
+
+
+
 
 
         <!-- START OF ABOUT ME -->
@@ -83,7 +102,7 @@
                 </div>
                 <!-- <section class="toolkit"> -->
                 <div class="wrapper">
-                    <h2>my tookit</h2>
+                    <h2>my toolkit</h2>
                     <!-- ICONS DIVIDED INTO DIVS WITH DESC. TAG -->
                     <ul class="skill-icons">
                         <li>

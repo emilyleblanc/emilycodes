@@ -11,8 +11,7 @@ $accent-cream:#F3FFC6;
 $off-white:#FFF6EB;
 
 
-$base-font: 'Crimson Text', serif;
-$secondary-font:'Montserrat', sans-serif;
+$base-font: 'Montserrat', sans-serif;
 
 
 // GENERAL STYLES
@@ -42,56 +41,62 @@ ul{
 
 body{
     font-size: 1.8rem;
-    line-height: 1.6;
+    font-family: $base-font;
+    font-weight: 400;
+    line-height: 1.7;
     color:$primary-color;
     background-color: $off-white;
 }
 
 h1{
-    font-family: $secondary-font;
+    font-family: $base-font;
+    font-size: 5rem;
     font-weight: 900;
-    color: #FCA336;
+    color:$brand-color;
 }
 
 
 h2{
     font-family: $base-font;
-    font-weight: 900;
-    font-size: 3rem;
+    font-weight: 400;
+    font-size: 3.5rem;
 }
 
 h3{
-    font-family: $secondary-font;
+    font-family: $base-font;
+    font-weight: 200;
+    font-style: italic;
     font-size: 2rem;
+    color: $brand-color;
 }
 
 // HEADER STYLES
 
 header{
     padding: 2em;
-    height: 90vh;
+    height: 100vh;
     text-align: center;
-
-    
-    nav{
-        display: flex;
-        justify-content: flex-end;
-        i{
-            font-size: 3rem;
-        }
-    }
 }
-.title{
+
+.header-flex-container{
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
     i{
-        font-size: 2rem;
-        color: $primary-color;
+        font-size: 3rem;
     }
 }
+    
+    
+    
+
+    
 
 .img-and-h1{
     display: flex;
@@ -115,9 +120,36 @@ section{
 
 }
 
+.box{
+    position: relative;
+}
+
+
+.project-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(252,163,54,0.6) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.box:hover .project-details{
+    visibility: visible;
+}
+
+
+
 .box1{
     background-color: $brand-color;
-    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .box2{
@@ -133,10 +165,6 @@ section{
 
 // ABOUT ME STYLES
 
-svg{
-    fill: $primary-color;
-}
-
 
 .img-and-bio{
     padding: 2em;
@@ -144,6 +172,10 @@ svg{
     grid-template-columns: 1fr 2fr;
     gap: 3rem;
     text-align: left;
+    p{
+        max-width: 60ch;
+        font-size: 1.4rem;
+    }
 
     button{
         border: none;
@@ -151,7 +183,7 @@ svg{
         background-color: $brand-color;
         color: $primary-color;
         font-weight: 900;
-        font-family: $secondary-font;
+        font-family: $base-font;
         &:hover,
         &:focus{
             background-color: $secondary-color;
@@ -198,9 +230,10 @@ form{
     textarea{
         padding: .3em;
         font-family: $base-font;
+        font-style: italic;
+        font-weight: 400;
         background-color: $off-white;
         color: $primary-color;
-        font-size: 1.8rem;
         &:focus{
             border: 2px solid $secondary-color;
         }
@@ -217,7 +250,7 @@ form{
         background-color: $secondary-color;
         color: $primary-color;
         font-weight: 900;
-        font-family: $secondary-font;
+        font-family: $base-font;
         &:hover,
         &:focus{
             background-color: $accent-cream;
