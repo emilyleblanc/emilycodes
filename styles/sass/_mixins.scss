@@ -1,0 +1,13 @@
+
+// media query mixin
+@mixin tablet{
+    @media(max-width: 973px) {@content}
+}
+
+@mixin phone {
+    @media(max-width: 475px) {@content}
+}
+
+@mixin landscape{
+    @media(max-width: 785px) {@content}
+}

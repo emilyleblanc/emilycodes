@@ -1,5 +1,6 @@
 @import 'setup';
 @import 'portfolio';
+@import 'mixins';
 
 // Variables 
 $primary-color:#696773;
@@ -302,8 +303,14 @@ section{
 .social-media-icons{
     display: flex;
     justify-content: center;
-    li{
-        padding: 1em;
+    a{
+        padding: 0 1em;
+        margin-bottom: 20px;
+        &:hover,
+        &:focus{
+            color: $accent-cream;
+        }
+
     }
 }
 
@@ -353,6 +360,79 @@ footer{
     text-align: center;
     background-color: #B9C0DA;
 }
+
+
+
+
+@include tablet{
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+        
+   
+    .project-details{
+        font-size: 1.6rem;
+        p:last-of-type{
+            font-size: 2rem;
+        }
+    }
+
+    .skill-icons{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    form{
+        grid-template-columns: 1fr 1fr;
+    }
+    form button{
+        grid-column-start: 2;
+    }
+
+    form textarea{
+        grid-column: span 2;
+    }
+
+
+}
+
+@include landscape{
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+
+    .img-and-bio{
+        grid-template-columns: 1fr;
+    }
+    form{
+        grid-template-columns: 1fr;
+    }
+    form button{
+        grid-column-start: 1;
+    }
+
+    form textarea{
+        grid-column: span 1;
+    }
+
+}
+
+
+
+@include phone{
+    h1{
+        font-size: 4rem;
+    }
+    .about-me .skill-icons{
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper{
+        width: 95%;
+    }
+
+    
+}
+
+
 
 
 
