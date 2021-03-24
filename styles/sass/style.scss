@@ -303,8 +303,14 @@ section{
 .social-media-icons{
     display: flex;
     justify-content: center;
-    li{
-        padding: 1em;
+    a{
+        padding: 0 1em;
+        margin-bottom: 20px;
+        &:hover,
+        &:focus{
+            color: $accent-cream;
+        }
+
     }
 }
 
@@ -356,17 +362,7 @@ footer{
 }
 
 
-@include phone{
-    h1{
-        font-size: 4rem;
-    }
-    .about-me .skill-icons{
-        grid-template-columns: 1fr 1fr;
-    }
-   
 
-    
-}
 
 @include tablet{
     .gallery{
@@ -399,7 +395,7 @@ footer{
 
 }
 
-@media(max-width: 785px){
+@include landscape{
     .gallery{
         grid-template-columns: 1fr;
     }
@@ -419,6 +415,24 @@ footer{
     }
 
 }
+
+
+
+@include phone{
+    h1{
+        font-size: 4rem;
+    }
+    .about-me .skill-icons{
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper{
+        width: 95%;
+    }
+
+    
+}
+
+
 
 
 

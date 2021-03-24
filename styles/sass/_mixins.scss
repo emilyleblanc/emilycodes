@@ -7,3 +7,7 @@
 @mixin phone {
     @media(max-width: 475px) {@content}
 }
+
+@mixin landscape{
+    @media(max-width: 785px) {@content}
+}

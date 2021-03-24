@@ -540,8 +540,13 @@ section {
           justify-content: center;
 }
 
-.social-media-icons li {
-  padding: 1em;
+.social-media-icons a {
+  padding: 0 1em;
+  margin-bottom: 20px;
+}
+
+.social-media-icons a:hover, .social-media-icons a:focus {
+  color: #F3FFC6;
 }
 
 form {
@@ -591,16 +596,6 @@ footer {
   background-color: #B9C0DA;
 }
 
-@media (max-width: 475px) {
-  h1 {
-    font-size: 4rem;
-  }
-  .about-me .skill-icons {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
-}
-
 @media (max-width: 973px) {
   .gallery {
     -ms-grid-columns: 1fr 1fr;
@@ -648,5 +643,18 @@ footer {
   }
   form textarea {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 475px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .about-me .skill-icons {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .wrapper {
+    width: 95%;
   }
 }
