@@ -1,5 +1,6 @@
 @import 'setup';
 @import 'portfolio';
+@import 'mixins';
 
 // Variables 
 $primary-color:#696773;
@@ -352,6 +353,43 @@ form{
 footer{
     text-align: center;
     background-color: #B9C0DA;
+}
+
+
+@include phone{
+    h1{
+        font-size: 4rem;
+    }
+
+    
+}
+
+@include tablet{
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-details{
+        font-size: 1.6rem;
+        p:last-of-type{
+            font-size: 2rem;
+        }
+    }
+
+    .skill-icons{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+}
+
+@media(max-width: 785px){
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+
+    .img-and-bio{
+        grid-template-columns: 1fr;
+    }
 }
 
 
