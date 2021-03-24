@@ -360,6 +360,10 @@ footer{
     h1{
         font-size: 4rem;
     }
+    .about-me .skill-icons{
+        grid-template-columns: 1fr 1fr;
+    }
+   
 
     
 }
@@ -368,6 +372,8 @@ footer{
     .gallery{
         grid-template-columns: 1fr 1fr;
     }
+        
+   
     .project-details{
         font-size: 1.6rem;
         p:last-of-type{
@@ -377,6 +383,17 @@ footer{
 
     .skill-icons{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    form{
+        grid-template-columns: 1fr 1fr;
+    }
+    form button{
+        grid-column-start: 2;
+    }
+
+    form textarea{
+        grid-column: span 2;
     }
 
 
@@ -390,6 +407,17 @@ footer{
     .img-and-bio{
         grid-template-columns: 1fr;
     }
+    form{
+        grid-template-columns: 1fr;
+    }
+    form button{
+        grid-column-start: 1;
+    }
+
+    form textarea{
+        grid-column: span 1;
+    }
+
 }
 
 

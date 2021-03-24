@@ -595,6 +595,10 @@ footer {
   h1 {
     font-size: 4rem;
   }
+  .about-me .skill-icons {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 973px) {
@@ -612,6 +616,17 @@ footer {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+  form {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  form button {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+  form textarea {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 785px) {
@@ -622,5 +637,16 @@ footer {
   .img-and-bio {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  form button {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  form textarea {
+    grid-column: span 1;
   }
 }
