@@ -319,7 +319,52 @@ nav {
 }
 
 nav i {
+  position: fixed;
+  z-index: 9;
   font-size: 3rem;
+}
+
+nav i:hover, nav i:focus {
+  color: #B9C0DA;
+}
+
+.navigation-modal {
+  display: none;
+}
+
+.toggle-class {
+  background-color: #FCA336;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+}
+
+.toggle-class i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+}
+
+.toggle-class i:hover, .toggle-class i:focus {
+  color: #F3FFC6;
+}
+
+.toggle-class a:hover, .toggle-class a:focus {
+  color: #F3FFC6;
 }
 
 .img-and-h1 {

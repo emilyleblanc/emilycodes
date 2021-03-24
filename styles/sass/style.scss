@@ -95,7 +95,49 @@ nav{
     display: flex;
     justify-content: flex-end;
     i{
+        position: fixed;
+        z-index: 9;
         font-size: 3rem;
+        &:hover,
+        &:focus{
+            color: $secondary-color;
+        }
+    }
+}
+
+.navigation-modal{
+    display: none;
+}
+
+
+
+.toggle-class{
+    background-color: $brand-color;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+        i{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3rem;
+            &:hover,
+            &:focus{
+                color:$accent-cream;
+            }
+        }
+        a{
+            &:hover,
+            &:focus{
+                color: $accent-cream;
+        }
     }
 }
     
