@@ -503,17 +503,14 @@ section {
 
 .img-and-bio button {
   border: none;
+  padding: 1em 2em;
   background-color: #FCA336;
   color: #696773;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
 }
 
-.img-and-bio button a {
-  padding: 1em 2em;
-}
-
-.img-and-bio button a:hover, .img-and-bio button a:focus {
+.img-and-bio button:hover, .img-and-bio button:focus {
   background-color: #B9C0DA;
 }
 
@@ -583,6 +580,7 @@ form button {
   -ms-grid-column: 3;
       grid-column-start: 3;
   border: none;
+  padding: 1em 2em;
   background-color: #B9C0DA;
   color: #696773;
   font-weight: 900;

@@ -266,18 +266,16 @@ section{
 
     button{
         border: none;
+        padding: 1em 2em;
         background-color: $brand-color;
         color: $primary-color;
         font-weight: 900;
         font-family: $base-font;
-        a{
-            padding: 1em 2em;
-
-            &:hover,
-            &:focus{
-                background-color: $secondary-color;
-            }
+        &:hover,
+        &:focus{
+            background-color: $secondary-color;
         }
+       
     }
 }
 
@@ -342,6 +340,7 @@ form{
     button{
         grid-column-start: 3;
         border: none;
+        padding: 1em 2em;
         background-color: $secondary-color;
         color: $primary-color;
         font-weight: 900;
