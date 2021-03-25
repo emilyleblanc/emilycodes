@@ -322,7 +322,7 @@ h3 {
   font-weight: 200;
   font-style: italic;
   font-size: 2rem;
-  color: #FCA336;
+  color: #F18805;
 }
 
 header {
@@ -464,7 +464,7 @@ section {
 }
 
 .project-details p:last-of-type {
-  color: #F3FFC6;
+  color: #F18805;
   font-weight: 200;
   font-size: 3rem;
   margin: 0;

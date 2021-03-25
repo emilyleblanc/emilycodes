@@ -74,7 +74,7 @@ h3{
     font-weight: 200;
     font-style: italic;
     font-size: 2rem;
-    color: $brand-color;
+    color: $accent-dark;
 }
 
 // HEADER STYLES
@@ -196,7 +196,7 @@ section{
     }
 
     p:last-of-type{
-        color: $accent-cream;
+        color: $accent-dark;
         font-weight: 200;
         font-size: 3rem;
         margin: 0;
