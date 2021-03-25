@@ -198,7 +198,7 @@ section{
     p:last-of-type{
         color: $accent-dark;
         font-weight: 200;
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 0;
     }
 
@@ -373,6 +373,14 @@ footer{
     .gallery{
         grid-template-columns: 1fr 1fr;
     }
+    .box{
+        height:400px
+    }
+    
+    .box3 img{
+        height: 400px;
+    }
+
         
    
     .project-details{

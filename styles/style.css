@@ -241,8 +241,8 @@ img {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -256,8 +256,8 @@ img {
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -466,7 +466,7 @@ section {
 .project-details p:last-of-type {
   color: #F18805;
   font-weight: 200;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -640,6 +640,12 @@ footer {
   .gallery {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .box {
+    height: 400px;
+  }
+  .box3 img {
+    height: 400px;
   }
   .project-details {
     font-size: 1.6rem;
