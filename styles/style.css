@@ -271,6 +271,39 @@ img {
           animation: chevron 0.7s linear infinite;
 }
 
+.success-message {
+  background-color: #B9C0DA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.success-message h2 {
+  color: #FFF6EB;
+}
+
+.success-message button {
+  border: none;
+  background-color: #FCA336;
+  color: #FFF6EB;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+
+.success-message button:hover {
+  background-color: #696773;
+}
+
+.success-message button a {
+  padding: 1em 2em;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 80%;

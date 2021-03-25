@@ -1,24 +1,8 @@
 @import 'setup';
 @import 'mixins';
 @import 'animation';
-
-// Variables 
-$primary-color:#696773;
-$secondary-color: #B9C0DA;
-$brand-color:#FCA336;
-$accent-light:#F0A202;
-$accent-dark:#F18805;
-$accent-cream:#F3FFC6;
-$off-white:#FFF6EB;
-
-
-$base-font: 'Montserrat', sans-serif;
-
-
-// GENERAL STYLES
-// *{
-//     border: 2px solid palegreen;
-// }
+@import 'sucessMessage';
+@import 'variables';
 
 .wrapper {
     max-width: 1200px;
