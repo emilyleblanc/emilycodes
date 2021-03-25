@@ -1,0 +1,15 @@
+@keyframes chevron {
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top:100%;
+    }
+
+}
+
+.fa-chevron-down{
+    position: absolute;
+    animation: chevron 2s linear infinite;
+}
