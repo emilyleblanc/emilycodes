@@ -235,6 +235,42 @@ img {
   height: auto;
 }
 
+@-webkit-keyframes chevron {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes chevron {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.fa-chevron-down {
+  position: relative;
+  -webkit-animation: chevron 0.7s linear infinite;
+          animation: chevron 0.7s linear infinite;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 80%;
