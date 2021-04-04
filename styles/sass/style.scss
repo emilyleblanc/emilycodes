@@ -4,6 +4,10 @@
 @import 'sucessMessage';
 @import 'variables';
 
+// *{
+//     border: 2px solid red;
+// }
+
 .wrapper {
     max-width: 1200px;
     width: 80%;
@@ -77,18 +81,93 @@ header{
 }
 
 nav{
-    display: flex;
-    justify-content: flex-end;
-    i{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+
+.nav-toggle{
+    top: 24px;
+    z-index: 2;
+    right: 30px;
+    width: 22px;
+    height:20px;
+    padding: 8px 0;
+    border-radius: 50%;
+    position: absolute;
+}
+.nav-toggle span{
+    height: 4px;
+    display: block;
+    overflow: hidden;
+    background-color: $primary-color;
+    border-radius: 2px;
+}
+
+.nav-toggle::before,
+.nav-toggle::after{
+    left: 0;
+    content: "";
+    width: 22px;
+    height:4px;
+    background-color: $primary-color;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.nav-toggle::before{
+    top: 0;
+}
+
+.nav-toggle::after{
+    bottom: 0;
+}
+
+.hamburger{
         position: fixed;
         z-index: 9;
-        font-size: 3rem;
-        &:hover,
-        &:focus{
-            color:$secondary-color;
-        }
-    }
+        height: 4px;
+        display: block;
+        overflow: hidden;
+        text-indent: 100%;
+        border-radius:2px;
+        transition: all 0.3s ease-in-out;
+
 }
+
+.hamburger{
+    display:block;
+    position: relative;
+    &:focus,
+    &:hover,
+    &active{
+        transform:rotate(45deg);
+    }    
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before{
+        transform:rotate(90deg) translate(-12px, -16px);
+          
+    }    
+    &:hover::after
+    &:focus::after,
+    &:active::after{
+        opacity: 0;
+    }    
+}    
+
+
+
+
+    
+
+    
+
+
 
 
 .navigation-modal{

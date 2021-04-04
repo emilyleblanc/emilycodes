@@ -265,7 +265,7 @@ img {
   }
 }
 
-.fa-chevron-down {
+.animated-chevron {
   position: relative;
   -webkit-animation: chevron 0.7s linear infinite;
           animation: chevron 0.7s linear infinite;
@@ -379,22 +379,80 @@ header {
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
 }
 
-nav i {
+.nav-toggle {
+  top: 24px;
+  z-index: 2;
+  right: 30px;
+  width: 22px;
+  height: 20px;
+  padding: 8px 0;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.nav-toggle span {
+  height: 4px;
+  display: block;
+  overflow: hidden;
+  background-color: #696773;
+  border-radius: 2px;
+}
+
+.nav-toggle::before,
+.nav-toggle::after {
+  left: 0;
+  content: "";
+  width: 22px;
+  height: 4px;
+  background-color: #696773;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.nav-toggle::before {
+  top: 0;
+}
+
+.nav-toggle::after {
+  bottom: 0;
+}
+
+.hamburger {
   position: fixed;
   z-index: 9;
-  font-size: 3rem;
+  height: 4px;
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-nav i:hover, nav i:focus {
-  color: #B9C0DA;
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger:focus, .hamburger:hover, .hamburgeractive {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburger:hover::before, .hamburger:focus::before, .hamburger:active::before {
+  -webkit-transform: rotate(90deg) translate(-12px, -16px);
+          transform: rotate(90deg) translate(-12px, -16px);
+}
+
+.hamburger:hover::after .hamburger:focus::after, .hamburger:active::after {
+  opacity: 0;
 }
 
 .navigation-modal {

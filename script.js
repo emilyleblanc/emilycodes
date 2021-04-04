@@ -2,21 +2,23 @@
 
 // Display navigation on click of hamburger menu
 
-const exitIcon = document.getElementsByClassName('fa-times')
 
-const menuIcon = document.getElementsByClassName('fa-bars')
+// animation when you hover on hamburger menu
 
-const navigationMenu = document.querySelector('div')
+// const hamburgerMenu = document.querySelector('.nav-toggle');
+// console.log(hamburgerMenu);
 
-menuIcon[0].addEventListener('click', () => {
-    console.log('it clicked')
-    navigationMenu.classList.add('toggle-class')
-})
+// const divEl = document.querySelector('nav');
+// console.log(divEl);
 
-exitIcon[0].addEventListener('click', () => {
-    console.log('clicky')
-    navigationMenu.classList.remove('toggle-class')
-})
+
+// hamburgerMenu.addEventListener('mouseover', ()=>{
+//     console.log('hovered');
+//     divEl.classList.toggle('nav-open');
+// })
+
+    
+
 
 
 
