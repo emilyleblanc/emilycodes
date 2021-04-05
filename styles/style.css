@@ -273,7 +273,7 @@ img {
 }
 
 .success-message {
-  background-color: #B9C0DA;
+  background-color: #dbd8b3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,13 +286,13 @@ img {
 }
 
 .success-message h2 {
-  color: #FFF6EB;
+  color: #fff;
 }
 
 .success-message button {
   border: none;
-  background-color: #FCA336;
-  color: #FFF6EB;
+  background-color: #c6d8af;
+  color: #fff;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
 }
@@ -306,7 +306,7 @@ img {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1050px;
   width: 80%;
   margin: 0 auto;
 }
@@ -334,14 +334,14 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #696773;
-  background-color: #FFF6EB;
+  background-color: #fff;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 5rem;
   font-weight: 900;
-  color: #FCA336;
+  color: #c6d8af;
 }
 
 h2 {
@@ -356,7 +356,12 @@ h3 {
   font-weight: 200;
   font-style: italic;
   font-size: 2rem;
-  color: #F3FFC6;
+  color: #fcc8b2;
+}
+
+button {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 header {
@@ -375,7 +380,7 @@ nav {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 10;
+  z-index: 9;
 }
 
 .nav-toggle {
@@ -415,6 +420,7 @@ nav {
   overflow: hidden;
   background-color: #696773;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .nav-toggle::before,
@@ -438,11 +444,8 @@ nav {
 }
 
 .navigation-modal {
-  display: none;
-}
-
-.toggle-class {
-  background-color: #FCA336;
+  visibility: hidden;
+  background-color: #c6d8af;
   position: absolute;
   top: 0;
   left: 0;
@@ -461,32 +464,24 @@ nav {
   font-size: 3rem;
 }
 
-.toggle-class i {
+.navigation-modal i {
   position: absolute;
   top: 0;
   right: 0;
   padding: 3rem;
+  cursor: pointer;
 }
 
-.toggle-class i:hover, .toggle-class i:focus {
-  color: #F3FFC6;
+.navigation-modal i:hover, .navigation-modal i:focus {
+  color: #fcc8b2;
 }
 
-.toggle-class a:hover, .toggle-class a:focus {
-  color: #F3FFC6;
+.navigation-modal a {
+  cursor: pointer;
 }
 
-.img-and-h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 50px;
+.navigation-modal a:hover, .navigation-modal a:focus {
+  color: #fcc8b2;
 }
 
 section {
@@ -503,6 +498,12 @@ section {
 
 .box {
   position: relative;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+}
+
+.box:hover .project-details {
+  opacity: 1;
 }
 
 .project-details {
@@ -525,19 +526,21 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  visibility: hidden;
+  opacity: 0;
+}
+
+.project-details p {
+  color: #fcc8b2;
 }
 
 .project-details p:first-of-type {
   font-weight: 400;
   font-size: 1.4rem;
   max-width: 30ch;
-  color: #F3FFC6;
   margin: 0;
 }
 
 .project-details p:last-of-type {
-  color: #F3FFC6;
   font-weight: 200;
   font-size: 2rem;
   margin: 0;
@@ -546,7 +549,7 @@ section {
 .project-details button {
   border: none;
   margin: 0.5em;
-  background-color: #B9C0DA;
+  background-color: #dbd8b3;
   color: #696773;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
@@ -554,19 +557,15 @@ section {
 }
 
 .project-details button a {
-  padding: 1em 2em;
+  padding: 0.5em 1em;
 }
 
 .project-details button:hover, .project-details button:focus {
-  background-color: #F3FFC6;
-}
-
-.box:hover .project-details {
-  visibility: visible;
+  background-color: #fcc8b2;
 }
 
 .box1 {
-  background-color: #FCA336;
+  background-color: #c6d8af;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -579,7 +578,7 @@ section {
 }
 
 .box2 {
-  background-color: #B9C0DA;
+  background-color: #dbd8b3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,7 +591,7 @@ section {
 }
 
 .box3 {
-  background-color: #F3FFC6;
+  background-color: #fcc8b2;
 }
 
 .img-and-bio {
@@ -603,31 +602,32 @@ section {
       grid-template-columns: 1fr 2fr;
   gap: 3rem;
   text-align: left;
-  background-color: #B9C0DA;
+}
+
+.img-and-bio h3,
+.img-and-bio p {
+  max-width: 50ch;
 }
 
 .img-and-bio p {
-  max-width: 55ch;
   font-size: 1.4rem;
 }
 
 .img-and-bio button {
   border: none;
   padding: 1em 2em;
-  background-color: #FCA336;
+  background-color: #c6d8af;
   color: #696773;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
 }
 
 .img-and-bio button:hover, .img-and-bio button:focus {
-  background-color: #F3FFC6;
+  background-color: #fcc8b2;
 }
 
 .skill-icons {
-  background-color: #696773;
-  color: #F3FFC6;
-  padding: 2em;
+  padding: 2em 2em 0 2em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -635,12 +635,16 @@ section {
   gap: 1em 0;
 }
 
+.skill-icons p {
+  margin-top: 0;
+}
+
 .skill-icons i {
   font-size: 4rem;
 }
 
 .contact-me {
-  background-color: #FCA336;
+  background-color: #c6d8af;
 }
 
 .social-media-icons {
@@ -659,7 +663,7 @@ section {
 }
 
 .social-media-icons a:hover, .social-media-icons a:focus {
-  color: #F3FFC6;
+  color: #fcc8b2;
 }
 
 .contact-me h2 {
@@ -680,13 +684,13 @@ form textarea {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-weight: 400;
-  background-color: #FFF6EB;
+  background-color: #fff;
   color: #696773;
 }
 
 form input:focus,
 form textarea:focus {
-  border: 2px solid #B9C0DA;
+  border: 2px solid #dbd8b3;
 }
 
 form textarea {
@@ -698,10 +702,11 @@ form button {
       grid-column-start: 3;
   border: none;
   padding: 1em 2em;
-  background-color: #B9C0DA;
+  background-color: #dbd8b3;
   color: #696773;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
 form button a {
@@ -709,7 +714,7 @@ form button a {
 }
 
 form button:hover, form button:focus {
-  background-color: #F3FFC6;
+  background-color: #fcc8b2;
 }
 
 footer {

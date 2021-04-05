@@ -2,20 +2,37 @@
 
 // Display navigation on click of hamburger menu
 
+// Select elements from the DOM
+const hamburgerMenu = document.querySelector('.nav-toggle');
+console.log(hamburgerMenu);
 
-// animation when you hover on hamburger menu
+const divEl = document.querySelector('.navigation-modal');
+console.log(divEl);
 
-// const hamburgerMenu = document.querySelector('.nav-toggle');
-// console.log(hamburgerMenu);
+const exitIcon = document.querySelector('.fa-times')
 
-// const divEl = document.querySelector('nav');
-// console.log(divEl);
+// Add Event Listener to Hamburger Menu so it displays nav on click
+
+hamburgerMenu.addEventListener('click', () => {
+    console.log('clicked');
+    divEl.style.visibility = 'visible'
+
+})
+
+hamburgerMenu.addEventListener('click', () => {
+    console.log('clicked');
+    divEl.style.visibility = 'visible';
+
+})
+
+exitIcon.addEventListener('click', ()=>{
+    divEl.style.visibility = 'hidden';
+});
 
 
-// hamburgerMenu.addEventListener('mouseover', ()=>{
-//     console.log('hovered');
-//     divEl.classList.toggle('nav-open');
-// })
+
+
+
 
     
 
