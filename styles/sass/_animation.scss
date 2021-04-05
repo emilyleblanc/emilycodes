@@ -15,6 +15,7 @@
 }
 
 .animated-chevron{
-    position: relative;
+    position: absolute;
+    bottom: 0;
     animation: chevron 0.7s linear infinite;
 }

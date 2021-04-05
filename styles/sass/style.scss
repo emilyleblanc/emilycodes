@@ -71,23 +71,18 @@ header{
     padding: 2em;
     height: 100vh;
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
-.header-flex-container{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 
 nav{
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
 }
-
 
 .nav-toggle{
     top: 24px;
@@ -98,7 +93,28 @@ nav{
     padding: 8px 0;
     border-radius: 50%;
     position: absolute;
-}
+    &:hover::before,
+    &:focus::before,
+    &:active::before{
+        top: 8px;
+        left: -3px;
+        transform:rotate(45deg)
+              
+        }    
+    &:hover::after,
+    &:focus::after,
+    &:active::after{
+        left: 9px;
+        bottom: 8px;
+        transform: rotate(-45deg)
+        }    
+    &:focus span,
+    &:hover span,
+    &active span{
+            opacity: 0;
+        }
+    }    
+
 .nav-toggle span{
     height: 4px;
     display: block;
@@ -116,6 +132,7 @@ nav{
     background-color: $primary-color;
     border-radius: 2px;
     position: absolute;
+    transition: width 0.2s ease-in-out, background 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .nav-toggle::before{
@@ -125,50 +142,6 @@ nav{
 .nav-toggle::after{
     bottom: 0;
 }
-
-.hamburger{
-        position: fixed;
-        z-index: 9;
-        height: 4px;
-        display: block;
-        overflow: hidden;
-        text-indent: 100%;
-        border-radius:2px;
-        transition: all 0.3s ease-in-out;
-
-}
-
-.hamburger{
-    display:block;
-    position: relative;
-    &:focus,
-    &:hover,
-    &active{
-        transform:rotate(45deg);
-    }    
-
-    &:hover::before,
-    &:focus::before,
-    &:active::before{
-        transform:rotate(90deg) translate(-12px, -16px);
-          
-    }    
-    &:hover::after
-    &:focus::after,
-    &:active::after{
-        opacity: 0;
-    }    
-}    
-
-
-
-
-    
-
-    
-
-
-
 
 .navigation-modal{
     display: none;

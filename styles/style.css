@@ -266,7 +266,8 @@ img {
 }
 
 .animated-chevron {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   -webkit-animation: chevron 0.7s linear infinite;
           animation: chevron 0.7s linear infinite;
 }
@@ -362,28 +363,19 @@ header {
   padding: 2em;
   height: 100vh;
   text-align: center;
-}
-
-.header-flex-container {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav {
   position: fixed;
-  top: 0;
   right: 0;
+  top: 0;
   z-index: 10;
-  width: 100%;
 }
 
 .nav-toggle {
@@ -395,6 +387,26 @@ nav {
   padding: 8px 0;
   border-radius: 50%;
   position: absolute;
+}
+
+.nav-toggle:hover::before, .nav-toggle:focus::before, .nav-toggle:active::before {
+  top: 8px;
+  left: -3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-toggle:hover::after, .nav-toggle:focus::after, .nav-toggle:active::after {
+  left: 9px;
+  bottom: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.nav-toggle:focus span,
+.nav-toggle:hover span,
+.nav-toggleactive span {
+  opacity: 0;
 }
 
 .nav-toggle span {
@@ -414,6 +426,7 @@ nav {
   background-color: #696773;
   border-radius: 2px;
   position: absolute;
+  transition: width 0.2s ease-in-out, background 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .nav-toggle::before {
@@ -422,37 +435,6 @@ nav {
 
 .nav-toggle::after {
   bottom: 0;
-}
-
-.hamburger {
-  position: fixed;
-  z-index: 9;
-  height: 4px;
-  display: block;
-  overflow: hidden;
-  text-indent: 100%;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger {
-  display: block;
-  position: relative;
-}
-
-.hamburger:focus, .hamburger:hover, .hamburgeractive {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.hamburger:hover::before, .hamburger:focus::before, .hamburger:active::before {
-  -webkit-transform: rotate(90deg) translate(-12px, -16px);
-          transform: rotate(90deg) translate(-12px, -16px);
-}
-
-.hamburger:hover::after .hamburger:focus::after, .hamburger:active::after {
-  opacity: 0;
 }
 
 .navigation-modal {
