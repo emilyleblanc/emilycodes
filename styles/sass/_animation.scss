@@ -14,7 +14,8 @@
 
 }
 
-.fa-chevron-down{
-    position: relative;
+.animated-chevron{
+    position: absolute;
+    bottom: 0;
     animation: chevron 0.7s linear infinite;
 }

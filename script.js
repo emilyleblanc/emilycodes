@@ -2,21 +2,40 @@
 
 // Display navigation on click of hamburger menu
 
-const exitIcon = document.getElementsByClassName('fa-times')
+// Select elements from the DOM
+const hamburgerMenu = document.querySelector('.nav-toggle');
+console.log(hamburgerMenu);
 
-const menuIcon = document.getElementsByClassName('fa-bars')
+const divEl = document.querySelector('.navigation-modal');
+console.log(divEl);
 
-const navigationMenu = document.querySelector('div')
+const exitIcon = document.querySelector('.fa-times')
 
-menuIcon[0].addEventListener('click', () => {
-    console.log('it clicked')
-    navigationMenu.classList.add('toggle-class')
+// Add Event Listener to Hamburger Menu so it displays nav on click
+
+hamburgerMenu.addEventListener('click', () => {
+    console.log('clicked');
+    divEl.style.visibility = 'visible'
+
 })
 
-exitIcon[0].addEventListener('click', () => {
-    console.log('clicky')
-    navigationMenu.classList.remove('toggle-class')
+hamburgerMenu.addEventListener('click', () => {
+    console.log('clicked');
+    divEl.style.visibility = 'visible';
+
 })
+
+exitIcon.addEventListener('click', ()=>{
+    divEl.style.visibility = 'hidden';
+});
+
+
+
+
+
+
+    
+
 
 
 
