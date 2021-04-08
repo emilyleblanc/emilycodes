@@ -20,6 +20,7 @@ a{
     color: inherit;
     text-decoration: none;
     display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 
 h1,
@@ -146,6 +147,7 @@ nav{
 
 .navigation-modal{
     visibility: hidden;
+    transition: visibility 0.3s ease-in-out;
     background-color: $brand-color;
     position:absolute;
     top:0;
@@ -170,7 +172,24 @@ nav{
     position: absolute;
     top: 30px;
     right: 40px;
-    span{
+    cursor: pointer;
+  
+    &:hover::after,
+    &:focus::after,
+    &:active::after{
+        transform: translate(-11px,-2px) rotate(120deg);
+        color: $accent-cream;
+    } 
+    &:hover span,
+    &:focus span,
+    &:active span{
+        transform: translate(4px,2px) rotate(57deg);
+        color: $accent-cream;
+        
+    }   
+}
+
+.exit-animation span{
         height: 4px;
         width: 30px;
         display: block;
@@ -179,24 +198,9 @@ nav{
         border-radius: 2px;
         transform: rotate(45deg);
         cursor: pointer;
-    }
-    &:hover::after,
-    &:focus::after,
-    &:active::after{
-        left: 9px;
-        bottom: 8px;
-        transform: rotate(-45deg)
-        } 
-    &:hover span,
-    &:focus span,
-    &:active span{
-        left: 9px;
-        bottom: 8px;
-        transform: rotate(-45deg)
-        }   
 
 }
-
+        
 .exit-animation::after{
     content: "";
     height: 4px;
@@ -205,10 +209,19 @@ nav{
     background-color: $primary-color;
     border-radius: 2px;
     position: absolute;
-    top: 6px;
+    top: 6px;       
     transform: rotate(134deg) translate(-4px, 4px);
 }
+
+.exit-animation::after,
+.exit-animation span{
+    transition: all 0.3s ease-in-out;
+}
     
+        
+        
+
+
 
 // MAIN STYLES
 

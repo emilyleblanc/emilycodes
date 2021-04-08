@@ -320,6 +320,8 @@ a {
   color: inherit;
   text-decoration: none;
   display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 h1,
@@ -445,6 +447,8 @@ nav {
 
 .navigation-modal {
   visibility: hidden;
+  -webkit-transition: visibility 0.3s ease-in-out;
+  transition: visibility 0.3s ease-in-out;
   background-color: #f0a202;
   position: absolute;
   top: 0;
@@ -476,6 +480,21 @@ nav {
   position: absolute;
   top: 30px;
   right: 40px;
+  cursor: pointer;
+}
+
+.exit-animation:hover::after, .exit-animation:focus::after, .exit-animation:active::after {
+  -webkit-transform: translate(-11px, -2px) rotate(120deg);
+          transform: translate(-11px, -2px) rotate(120deg);
+  color: #f3ffc6;
+}
+
+.exit-animation:hover span,
+.exit-animation:focus span,
+.exit-animation:active span {
+  -webkit-transform: translate(4px, 2px) rotate(57deg);
+          transform: translate(4px, 2px) rotate(57deg);
+  color: #f3ffc6;
 }
 
 .exit-animation span {
@@ -490,22 +509,6 @@ nav {
   cursor: pointer;
 }
 
-.exit-animation:hover::after, .exit-animation:focus::after, .exit-animation:active::after {
-  left: 9px;
-  bottom: 8px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.exit-animation:hover span,
-.exit-animation:focus span,
-.exit-animation:active span {
-  left: 9px;
-  bottom: 8px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 .exit-animation::after {
   content: "";
   height: 4px;
@@ -517,6 +520,12 @@ nav {
   top: 6px;
   -webkit-transform: rotate(134deg) translate(-4px, 4px);
           transform: rotate(134deg) translate(-4px, 4px);
+}
+
+.exit-animation::after,
+.exit-animation span {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 section {
