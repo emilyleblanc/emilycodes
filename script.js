@@ -9,7 +9,7 @@ console.log(hamburgerMenu);
 const divEl = document.querySelector('.navigation-modal');
 console.log(divEl);
 
-const exitIcon = document.querySelector('.fa-times')
+const exitIcon = document.querySelector('.exit-animation')
 
 // Add Event Listener to Hamburger Menu so it displays nav on click
 
