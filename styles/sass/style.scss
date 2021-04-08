@@ -133,7 +133,7 @@ nav{
     background-color: $primary-color;
     border-radius: 2px;
     position: absolute;
-    transition: width 0.2s ease-in-out, background 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-toggle::before{
@@ -157,17 +157,6 @@ nav{
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-        i{
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 3rem;
-            cursor: pointer;
-            &:hover,
-            &:focus{
-                color:$accent-cream;
-            }
-        }
         a{
             cursor: pointer;
             &:hover,
@@ -176,6 +165,50 @@ nav{
         }
     }
 }
+
+.exit-animation{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    span{
+        height: 4px;
+        width: 30px;
+        display: block;
+        overflow: hidden;
+        background-color: $primary-color;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+    &:hover::after,
+    &:focus::after,
+    &:active::after{
+        left: 9px;
+        bottom: 8px;
+        transform: rotate(-45deg)
+        } 
+    &:hover span,
+    &:focus span,
+    &:active span{
+        left: 9px;
+        bottom: 8px;
+        transform: rotate(-45deg)
+        }   
+
+}
+
+.exit-animation::after{
+    content: "";
+    height: 4px;
+    width: 30px;
+    display: block;
+    background-color: $primary-color;
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    transform: rotate(134deg) translate(-4px, 4px);
+}
+    
 
 // MAIN STYLES
 

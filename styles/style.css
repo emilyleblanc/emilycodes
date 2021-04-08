@@ -320,8 +320,6 @@ a {
   color: inherit;
   text-decoration: none;
   display: inline-block;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 h1,
@@ -433,7 +431,8 @@ nav {
   background-color: #696773;
   border-radius: 2px;
   position: absolute;
-  transition: width 0.2s ease-in-out, background 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-toggle::before {
@@ -465,24 +464,59 @@ nav {
   font-size: 3rem;
 }
 
-.navigation-modal i {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 3rem;
-  cursor: pointer;
-}
-
-.navigation-modal i:hover, .navigation-modal i:focus {
-  color: #f3ffc6;
-}
-
 .navigation-modal a {
   cursor: pointer;
 }
 
 .navigation-modal a:hover, .navigation-modal a:focus {
   color: #f3ffc6;
+}
+
+.exit-animation {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.exit-animation span {
+  height: 4px;
+  width: 30px;
+  display: block;
+  overflow: hidden;
+  background-color: #696773;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.exit-animation:hover::after, .exit-animation:focus::after, .exit-animation:active::after {
+  left: 9px;
+  bottom: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.exit-animation:hover span,
+.exit-animation:focus span,
+.exit-animation:active span {
+  left: 9px;
+  bottom: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.exit-animation::after {
+  content: "";
+  height: 4px;
+  width: 30px;
+  display: block;
+  background-color: #696773;
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  -webkit-transform: rotate(134deg) translate(-4px, 4px);
+          transform: rotate(134deg) translate(-4px, 4px);
 }
 
 section {
