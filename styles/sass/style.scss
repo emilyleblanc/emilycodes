@@ -20,6 +20,7 @@ a{
     color: inherit;
     text-decoration: none;
     display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 
 h1,
@@ -133,7 +134,7 @@ nav{
     background-color: $primary-color;
     border-radius: 2px;
     position: absolute;
-    transition: width 0.2s ease-in-out, background 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-toggle::before{
@@ -146,6 +147,7 @@ nav{
 
 .navigation-modal{
     visibility: hidden;
+    transition: visibility 0.3s ease-in-out;
     background-color: $brand-color;
     position:absolute;
     top:0;
@@ -157,17 +159,6 @@ nav{
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-        i{
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 3rem;
-            cursor: pointer;
-            &:hover,
-            &:focus{
-                color:$accent-cream;
-            }
-        }
         a{
             cursor: pointer;
             &:hover,
@@ -176,6 +167,61 @@ nav{
         }
     }
 }
+
+.exit-animation{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+  
+    &:hover::after,
+    &:focus::after,
+    &:active::after{
+        transform: translate(-11px,-2px) rotate(120deg);
+        color: $accent-cream;
+    } 
+    &:hover span,
+    &:focus span,
+    &:active span{
+        transform: translate(4px,2px) rotate(57deg);
+        color: $accent-cream;
+        
+    }   
+}
+
+.exit-animation span{
+        height: 4px;
+        width: 30px;
+        display: block;
+        overflow: hidden;
+        background-color: $primary-color;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        cursor: pointer;
+
+}
+        
+.exit-animation::after{
+    content: "";
+    height: 4px;
+    width: 30px;
+    display: block;
+    background-color: $primary-color;
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;       
+    transform: rotate(134deg) translate(-4px, 4px);
+}
+
+.exit-animation::after,
+.exit-animation span{
+    transition: all 0.3s ease-in-out;
+}
+    
+        
+        
+
+
 
 // MAIN STYLES
 
