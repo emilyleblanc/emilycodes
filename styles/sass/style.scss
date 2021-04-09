@@ -241,10 +241,6 @@ section{
     position: relative;
 }
 
-.box:hover .project-details{
-    opacity: 1;
-}
-
 .project-details{
     display: flex;
     flex-direction: column;
@@ -257,6 +253,10 @@ section{
     top: 0;
     left: 0;
     opacity: 0;
+    &:hover{
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
 
     p{
         color: $accent-cream;

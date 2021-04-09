@@ -544,10 +544,6 @@ section {
   position: relative;
 }
 
-.box:hover .project-details {
-  opacity: 1;
-}
-
 .project-details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,6 +565,12 @@ section {
   top: 0;
   left: 0;
   opacity: 0;
+}
+
+.project-details:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .project-details p {
